@@ -1,7 +1,6 @@
 const startBtn = document.querySelector('[data-start]');
-console.log(startBtn)
-const stopBtn = document.querySelector('[data-stop]')
-console.log(stopBtn)
+const stopBtn = document.querySelector('[data-stop]');
+
 let timerId = null;
 
 
@@ -16,16 +15,22 @@ function getRandomHexColor() {
   
 }
 
-function onBtnClickStart() {
-    const colorRandom = getRandomHexColor();
-    document.body.style.backgroundColor = colorRandom;
+function onBtnClickStart(e) {
+ 
   timerId = setInterval(() => {
-    console.log();
+  const colorRandom = getRandomHexColor();
+    document.body.style.backgroundColor = colorRandom;
+    console.log(colorRandom);
   }, 1000);
-
+  if (startBtn.disabled = true) {
+    console.log(stopBtn.disabled = false)
+  }
     }
 
-function onBtnClickStop() {
-clearInterval(timerId);
-  console.log(timerId);
+function onBtnClickStop(e) {
+  clearInterval(timerId);
+  //startBtn.disabled = false;
+  if(stopBtn.disabled = true) {
+  console.log(startBtn.disabled = false)
+}
     }
