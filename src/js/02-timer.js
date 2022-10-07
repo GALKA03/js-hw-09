@@ -1,6 +1,9 @@
 import "flatpickr/dist/flatpickr.min.css";
 import flatpickr from "flatpickr";
 import Notiflix from 'notiflix';
+
+import 'flatpickr/dist/themes/dark.css';
+
 let selectedTime = null;
 
 const refs = {
