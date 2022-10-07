@@ -1,5 +1,4 @@
 import "flatpickr/dist/flatpickr.min.css";
-const flatpickr = require("flatpickr")
 import flatpickr from "flatpickr";
 import Notiflix from 'notiflix';
 let selectedTime = null;
