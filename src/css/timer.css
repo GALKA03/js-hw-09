@@ -1,0 +1,49 @@
+
+.timer{
+    position: absolute;
+    top: 30px;
+    left: 30%;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+border-radius: 30%;
+}
+.input{
+    margin-top: 100px;
+    position: relative;
+   color: rgb(36, 78, 64);
+
+width: 500px;   
+height: 30px;
+background-color: ffffff;
+    border: 1px solid #cccccc;
+    font-size: 20px;
+        line-height: 20px;
+}
+.conteiner-input{
+text-align: center;
+}
+.field:not(:last-child){
+    margin-right: 30px;
+      
+}
+.value{
+
+    color: aliceblue;
+    background-color: rgb(23, 167, 119);
+    border-radius: 60%;
+font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+   
+}
+.btn{
+    font-size: 20px;
+        line-height: 30px;
+
+   background-color: aquamarine;
+    border-radius: 30%;
+    cursor: pointer;
+
+}
