@@ -16,7 +16,7 @@ refs.btnStart.addEventListener('click', onBtnClickStart);
 refs.input.addEventListener('input', calendarStart)
 refs.btnStart.setAttribute('disabled', true);
 
- flatpickr('input[type="text"]', {
+ flatpickr(refs.input, {
  enableTime: true,//включает выбор времени
   time_24hr: true,//время в 24 часа
   defaultDate: new Date(),//Устанавливает начальную выбранную дату
