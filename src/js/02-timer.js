@@ -74,15 +74,13 @@ function onBtnClickStart() {
      
 //   }
 //  }
-function clearInterval() {
-  
-}
+
 function onAllParams({ days, hours, minutes, seconds }) {
   refs.daysTimer.textContent = String(days).padStart(2, '0');
   refs.hoursTimer.textContent = String(hours).padStart(2, '0');
   refs.minutesTimer.textContent = String(minutes).padStart(2, '0');
   refs.secondsTimer.textContent = String(seconds).padStart(2, '0');
-  
+ 
 }
 
 
