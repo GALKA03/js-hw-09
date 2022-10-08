@@ -15,7 +15,7 @@ const refs = {
   secondsTimer: document.querySelector('[data-seconds]')
 }
 refs.btnStart.addEventListener('click', onBtnClickStart);
-refs.input.addEventListener('input', calendarStart)
+//refs.input.addEventListener('input', calendarStart)
 refs.btnStart.setAttribute('disabled', true);
 
  flatpickr(refs.input, {
@@ -55,7 +55,7 @@ function onBtnClickStart() {
     const currentTime = Date.now();
     const delta = selectedTime - currentTime;
     const calculateDate = convertMs(delta)
-    onAllParams(calculateDate) 
+    onAllParams(calculateDate);
     if(calculateDate <= 0){
    clearInterval(timerID)
     }  
@@ -63,18 +63,20 @@ function onBtnClickStart() {
   },1000
   )   
 }
-function calendarStart() {
-   if (!selectedTime) {
-     refs.btnStart.setAttribute('disabled', true)
-refs.btnStart.disabled = false;
+// function calendarStart() {
+//    if (!selectedTime) {
+//      refs.btnStart.setAttribute('disabled', true)
+// //refs.btnStart.disabled = false;
      
-  }
-   else {
-     refs.btnStart.removeAttribute('disabled');
+//   }
+//    else {
+//      refs.btnStart.removeAttribute('disabled');
      
-  }
- }
-
+//   }
+//  }
+function clearInterval() {
+  
+}
 function onAllParams({ days, hours, minutes, seconds }) {
   refs.daysTimer.textContent = String(days).padStart(2, '0');
   refs.hoursTimer.textContent = String(hours).padStart(2, '0');
