@@ -59,16 +59,19 @@ function onBtnClickStart() {
     if(calculateDate <= 0){
    clearInterval(timerID)
     }  
-
+    refs.btnStart.disabled = true;
   },1000
   )   
 }
 function calendarStart() {
    if (!selectedTime) {
-       refs.btnStart.setAttribute('disabled', true)
+     refs.btnStart.setAttribute('disabled', true)
+
+     
   }
    else {
-      refs.btnStart.removeAttribute('disabled');
+     refs.btnStart.removeAttribute('disabled');
+     
   }
  }
 
