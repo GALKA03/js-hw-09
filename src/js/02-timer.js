@@ -66,7 +66,7 @@ function onBtnClickStart() {
 function calendarStart() {
    if (!selectedTime) {
      refs.btnStart.setAttribute('disabled', true)
-
+refs.btnStart.disabled = false;
      
   }
    else {
