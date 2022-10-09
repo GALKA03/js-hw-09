@@ -21,13 +21,12 @@ form.addEventListener('submit',onSubmitForm);
 function onSubmitForm(e) {
   e.preventDefault();
   let delay = e.target.delay.value;
-  console.log(delay)
   let amount = e.target.amount.value;
   let step = e.target.step.value;
 
   for (let position = 1; position <= amount; position += 1) {
     
-    createPromise(position,delay)
+    createPromise(position, delay)
       .then(({ position, delay }) => {
         setTimeout(() => {
           Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
