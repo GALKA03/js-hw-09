@@ -56,7 +56,7 @@ function onBtnClickStart() {
     const delta = selectedTime - currentTime;
     const calculateDate = convertMs(delta)
     onAllParams(calculateDate);
-    if(calculateDate <= 0){
+    if(delta < 1000){
    clearInterval(timerID)
     }  
     refs.btnStart.disabled = true;
