@@ -32,15 +32,16 @@ function onSubmitForm(e) {
           Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
        
         }, delay);
+        delay += step;
       })
       .catch(({ position, delay }) => {
         setTimeout(() => {
           Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`)
         }, delay)
-
+delay += step;
       });
   
-    delay += step;
+    
     
   }
  form.reset()
