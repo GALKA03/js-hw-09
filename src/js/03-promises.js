@@ -40,8 +40,6 @@ function onSubmitForm(e) {
         }, delay)
 delay += step;
       });
-  
-    
     
   }
  form.reset()
