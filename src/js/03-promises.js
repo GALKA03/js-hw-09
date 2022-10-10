@@ -20,28 +20,30 @@ form.addEventListener('submit',onSubmitForm);
 
 function onSubmitForm(e) {
   e.preventDefault();
-  let delay = e.target.delay.value;
-  let amount = e.target.amount.value;
-  let step = e.target.step.value;
-
+  let delay = Number(e.target.delay.value);
+  let amount = Number(e.target.amount.value) ;
+  let step = Number(e.target.step.value);
+ 
   for (let position = 1; position <= amount; position += 1) {
     
-    createPromise(position, delay)
-      .then(({ position, delay }) => {
-        setTimeout(() => {
-          Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
-       
-        }, delay);
-        delay += step;
-      })
-      .catch(({ position, delay }) => {
-        setTimeout(() => {
+      createPromise(position, delay)
+        .then(({ position, delay }) => {
+          setTimeout(() => {
+            Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
+          },delay)
+        })
+          .catch(({ position, delay }) => {
+          setTimeout(() => {
           Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`)
-        }, delay)
-delay += step;
-      });
-    
+
+        },delay);  
+   
+    } )
+    delay += step;
+  form.reset()
   }
- form.reset()
+  
+}
+
  
-  }
+  
